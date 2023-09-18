@@ -1,0 +1,777 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  }
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+
+.max-width{
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+body{
+  background-color:#E8F1F2 ;
+  
+
+}
+
+
+/*------------------- menu de inicio --------------------------------------*/
+
+.navbar{
+  position: fixed;
+  width: 100%;
+  background: #086788;
+  padding: 30px 0;
+  font-family: 'ubuntu',sans-serif;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky{
+  background: #07A0C3;
+  padding: 15px 0;
+}
+
+.navbar .max-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a{
+  color: #fff;
+  font-size: 35px; 
+  font-weight: 500;
+}
+
+.navbar .logo a span{
+color:  #3b2f2f ;
+transition: all 0.3s ease;
+
+}
+
+.navbar.sticky .logo a span{
+  color: aqua;
+  
+}
+
+.navbar .menu li{
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover{
+  color: #3b2f2f;
+ 
+}
+
+/*------------------- menu de hamburguer --------------------------------------*/
+.menu-btn{
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
+  
+}
+
+.scroll-up-btn{
+  position: fixed;
+  width: 41px;
+  height: 45px;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 50px;
+  color: #E8F1F2;
+  background: #086788;
+  border-radius: 6px;
+  font-size: 30px;
+  z-index: 9999;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show{
+  opacity: 1;
+  pointer-events: auto;
+  bottom: 30px;
+
+}
+
+
+/*------------------- geral --------------------------------------*/
+
+.about, .curriculo, .projetos, .contato footer{
+  font-family: 'roboto', sans-serif ;
+
+}
+
+
+.about .about-content,
+.curriculo .curriculo-content, 
+.projetos-content, 
+.contato-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/*------------------- capa portfolio--------------------------------------*/
+  
+.home{
+  display: flex;
+  background: url(imagens/fondo_port.png) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  color:rgb(252, 242, 242); 
+  min-height: 500px;
+  font-family: 'ubuntu', sans-serif;
+}
+
+.home .max-width{
+  margin: auto 0 auto 40px;
+}
+
+.home-content{
+  margin-top: 65px;
+}
+
+.home .home-content .text-1{
+  font-size: 27px;
+}
+
+.home .home-content .text-2{
+  font-size: 75px;
+  font-weight: 500;
+  margin-left: -3px;
+}
+
+.home .home-content .text-3{
+  font-size: 40px;
+  margin: 5px 0;
+}
+
+.home .home-content .text-3 span{
+  color:#DD1C1A;
+  font-weight: 500 ;
+}
+
+.home .home-content a{
+  display: inline-block;
+  background:  #13293D;
+  color: #fff;
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid  #13293D;
+}
+
+.home .home-content a:hover{
+  color: #fff;
+  background: none;
+
+}
+
+.redes {
+  margin-left: -3px;
+  padding: 10px;
+}
+
+
+
+
+/*------------------- section sobre mim --------------------------------------*/
+
+section{
+  padding: 50px 0;
+}
+
+.title:before,
+.title:after{
+  background-color: #086788;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+.title::before{
+  right: 0.5em;
+  margin-left: -40%;
+}
+
+.title:after{
+  left: 0.5em;
+  margin-right: -33%;
+}
+
+
+.about .title{
+  font-family: 'ubuntu' ,sans-serif;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  position: relative;
+  
+ }
+
+ .about .about-content .left{
+  width: 45%;
+ }
+
+ .about .about-content .right{
+  width: 55%;
+ }
+
+ .about .about-content .right .about-texto{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+ }
+
+ .about .about-content .right p{
+  text-align: justify;
+ }
+ 
+ .about .about-content .left img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+ }
+
+ /*------------------- section curriculo --------------------------------------*/
+
+ .curriculo .curriculo-content .column{
+  width: calc(75% - 30%);
+ }
+ .curriculo .curriculo-content .left .text{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+ }
+
+ .curriculo .curriculo-content .left p{
+  text-align: justify;
+ }
+
+ .curriculo .curriculo-content .left a{
+  display: inline-block;
+  background: #13293D;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 16px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid #13293D ;
+  transition: all 0.3s ease;
+ }
+
+ .curriculo .curriculo-content .left a:hover{
+  color: #13293D;
+  background: none;
+
+ }
+
+ .curriculo .curriculo-content .right .barras{
+    margin-bottom: 28px;
+ }
+
+ .curriculo .curriculo-content .right .info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+
+ .curriculo .curriculo-content .right span{
+  font-weight: 500;
+  font-size: 18px;
+ }
+
+ .curriculo .curriculo-content .right .line{
+  width: 100%;
+  height: 5px;
+  background: white;
+  position: relative;
+ }
+
+ .curriculo .curriculo-content .right .line::before{
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top:0;
+  left: 0;
+  background:#DD1C1A;
+
+ }
+
+.curriculo .curriculo-content .right .html::before{
+  width: 93%;
+
+  }
+
+.curriculo .curriculo-content .right .css::before{
+ width: 83%;
+  
+   }
+.curriculo .curriculo-content .right .js::before{
+ width: 43%;
+    
+    }
+.curriculo .curriculo-content .right .py::before{
+ width: 43%;
+      
+  }
+ .curriculo .curriculo-content .right .suporte::before{
+  width: 95%;
+   
+   }
+                  
+
+/*------------------- section projetos --------------------------------------*/
+
+
+
+.projetos .projetos-content .card {
+  width: calc(33% - 20px);
+  background:#086788 ;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  transition: all 0,3s ease;
+
+}
+
+.projetos .projetos-content .card:hover{
+  background: #07A0C3;
+}
+
+
+
+.projetos .projetos-content .card .text{
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+.projetos .projetos-content .card .box{
+  transition: all o.3s ease;
+}
+
+.projetos .projetos-content .card:hover .box{
+  transform: scale(1.05);
+}
+
+
+
+
+/*------------------- section contato / formulario --------------------------------------*/
+
+.contato .contato-content .column{
+  width: calc(75% - 30%);
+}
+.contato .contato-content {
+  align-items: flex-start;
+}
+
+
+.contato .contato-content .left p{
+  text-align: justify;
+}
+
+.contato .contato-content .text{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.contato .contato-content .left .icone{
+ margin: 10px 0;
+}
+
+.contato .contato-content .row{
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+
+.contato .contato-content .row .info{
+  margin-left:30px ;
+}
+
+.contato .contato-content .row .info .head{
+  font-weight: 500;
+}
+
+.contato .contato-content .row .info .sub-title{
+  color:#13293D;
+}
+
+.contato .contato-content .row ion-icon{
+  font-size: 25px;
+  color: #086788;
+}
+
+.contato .right form .fields {
+   display: flex;
+}
+
+.contato .right form .fields,
+.contato .right form .fields .field{
+  width: 100%;
+  height: 45px;
+  margin-bottom: 35px;
+}
+
+.contato .right form .fields input,
+.contato .right form .textarea textarea{
+  width: 100%;
+  height: 75%;
+  border: 2px solid #07A0C3;
+  border-radius: 6px;
+  outline: none;
+  font-size: 20px;
+  font-family: 'Roboto',sans-serif;
+  
+}
+
+.contato .right form .name{
+  margin-right: 10px;
+}
+.contato .right form .email{
+  margin-left: 10px;
+}
+
+.contato .right form .textarea{
+  width: 100%;
+  height: 120px;
+}
+
+.contato .right form .textarea textarea{
+  padding-top: 10px;
+  resize: vertical;
+}
+
+.contato .right form .button{
+  width: 130px;
+  height: 40px;
+      
+}
+
+
+.contato .right form .button button{
+  width: 100%;
+  height: 100%;
+  border: 2px solid #13293D;
+  background: #07A0C3;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3 ease;
+ }
+
+ .contato .right form .button button:hover{
+  color: #13293D;
+  background: none;
+
+ }
+
+ button:disabled{
+ cursor: not-allowed;
+ background: #555b69;
+ }
+
+ .success, .error{
+  text-align: center;
+ }
+ 
+ .success{
+  color:#086788;
+ }
+
+ .error{
+  color:#DD1C1A;
+ }
+
+
+
+/*------------------- section footer -------------------------------------*/
+
+footer {
+  background:#13293D;
+  padding: 20px 23px;
+  color: #fff;
+  text-align: center;
+  
+}
+
+footer span{
+   color: #fff;
+  
+}
+
+
+/* responsivo 1300 para laptop*/
+
+@media(max-width:1300px){
+ .navbar .max-width{
+  margin-left: 0;
+ }
+
+ .projetos .projetos-content .card img{ 
+  width: 80%;
+
+}
+ 
+
+
+}
+
+/* responsivo 1104*/
+
+@media(max-width:1104px){
+  .navbar .max-width{
+    padding: 0 50px;
+  }
+  .about .about-content .left img{
+    width: 250px;
+    height: 250px;
+    
+   }
+ }
+
+
+
+
+/*------------------- responsivo 947 --------------------------------------*/
+
+@media screen and (max-width:947px){
+
+ .max-width{
+   max-width:800px ;
+   padding: 0 50px;
+ }
+
+ .menu-btn{
+    display: block;
+    z-index: 999;
+
+ } 
+
+ .menu{
+  position: fixed;
+  top: 0; 
+  right: -100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #FFF1D0 ;
+  width: 100%; 
+  max-width: 150px;
+  padding: 150px 10px;
+  transition: 0.5s ease;
+ 
+    
+}
+
+.menu.active{
+  right: 0;
+}
+.navbar .menu li a{
+  color:#DD1C1A;
+  flex-direction: column;
+  }
+
+.home .home-content .text-2{
+  font-size: 70px;
+  
+}
+
+.home .home-content .text-3{
+  font-size: 35px;
+  
+}
+.home .home-content a {
+  font-size: 23px;
+  padding: 10px 30px;
+}
+
+
+.redes div{
+  margin-left: -1px;
+  
+  
+  
+}
+
+
+.title:before,
+.title:after{
+
+  content: "";
+  display: none;
+    
+}
+
+
+
+.about .about-content .column{
+width: 50%;
+}
+
+.about .about-content .left {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 60px;
+}
+
+.about .about-content .right {
+  flex: 100%;
+}
+
+.curriculo .curriculo-content .column,
+.contato .contato-content .column{
+   width: 100% ;
+   margin-bottom: 35px;
+}
+
+.projetos .projetos-content .card{
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+
+
+}
+
+/*------------------- responsivo 690 --------------------------------------*/
+
+@media (max-width:690px){
+  .home .home-content .text-2{
+    font-size: 60px;
+    
+  }
+  
+  .home .home-content .text-3{
+    font-size: 32px;
+    
+  }
+
+ 
+  .title{
+    color:#07A0C3;
+    text-decoration:underline red;
+
+  }
+
+
+.projetos .projetos-content .card{
+  width: 100%;
+
+}
+ 
+footer img{
+  margin-left: -100px;
+}
+  
+}
+
+
+/*------------------- responsivo 500 --------------------------------------*/
+
+@media (max-width:500px){
+
+  .navbar  .home{
+    max-width:500px ;
+   
+  }
+
+ .home  {
+  background: url(imagens/pexels-photo-1181673.jpeg);
+  background-size: cover;
+
+ }
+
+ .home .home-content .text-1{
+  font-size: 27px;
+  
+}
+  
+ .home .home-content .text-2{
+    font-size: 50px;
+    
+  }
+  
+  .home .home-content .text-3 span{
+    font-size: 27px;
+    color: #fff;
+    
+  }
+  
+  .title::before{
+    right: 0.5em;
+    margin-left: -80%;
+  }
+
+
+  .title:after{
+    left: 0.5em;
+    margin-right: -80%;
+  }
+  
+ 
+  .projetos .projetos-content .card img{ 
+    width: 80%;
+  
+  }
+  
+.contato .right form .fields input,
+.contato .right form .textarea textarea{
+  font-size: 12px;
+}
+    
+footer div{
+  text-align: center;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
