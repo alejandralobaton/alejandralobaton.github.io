@@ -382,7 +382,14 @@ section{
   transition: all 0,3s ease;
 
 }
+.projetos .projetos-content .card img{ 
+  width: 50%;
 
+}
+.projetos .projetos-content .card2 img{ 
+  width: 50%;
+
+}
 .projetos .card2{
   margin-top: 15px;
 }
